@@ -11,9 +11,9 @@ export class PostsComponent implements OnInit {
 
   constructor(httpClient: HttpClient){
     httpClient.get('https://jsonplaceholder.typicode.com/posts')
-    .subscribe(Response =>{
-      this.posts = this.json()
-    })
+      .subscribe(response => {
+        this.posts = response.json();
+      })
   };
 
 
