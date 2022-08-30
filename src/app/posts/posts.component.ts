@@ -21,7 +21,8 @@ export class PostsComponent implements OnInit {
     httpClient.get<Ipost[]>(this.url)
       .subscribe(response => {
         this.posts = response;
-      })
+        console.log(response);
+      });
   };
 
 
