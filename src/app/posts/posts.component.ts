@@ -17,8 +17,8 @@ export class PostsComponent implements OnInit {
   private url: 'https://jsonplaceholder.typicode.com/posts';
   posts!: Ipost[];
 
-  constructor(httpClient: HttpClient){
-    httpClient.get<Ipost[]>(this.url)
+  constructor(http: HttpClient){
+    http.get<Ipost[]>(this.url)
       .subscribe(response => {
         this.posts = response;
         console.log(response);
