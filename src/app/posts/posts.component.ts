@@ -15,7 +15,7 @@ interface Ipost {
 })
 export class PostsComponent implements OnInit {
   private url: 'https://jsonplaceholder.typicode.com/posts';
-  posts: Ipost[];
+  posts!: Ipost[];
 
   constructor(httpClient: HttpClient){
     httpClient.get<Ipost[]>(this.url)
